@@ -1,125 +1,124 @@
-# 💧 Automatic Water Level Monitoring and Control System
+# 💧 Автоматична система за наблюдение и контрол на нивото на водата
 
 ---
 
-## 📌 Goal
+## 📌 Цел
 
-The main goal of this project is to design and implement an automated system that continuously monitors the water level in a tank and controls a water pump to maintain optimal water levels without human intervention.
-
----
-
-## 🎯 Detailed Objectives
-
-- Measure the distance between the sensor and water surface using an ultrasonic sensor  
-- Convert the measured distance into water level data  
-- Process the sensor data using a microcontroller  
-- Define threshold levels (minimum and maximum)  
-- Automatically control a pump using a relay module  
-- Display system data via Serial Monitor for debugging and monitoring  
+Основната цел на този проект е да се проектира и внедри автоматизирана система, която непрекъснато следи нивото на водата в резервоар и управлява водна помпа, за да поддържа оптимални нива на водата без човешка намеса.
 
 ---
 
-## 🌍 Application Areas
+## 🎯 Подробни цели
 
-- Household water tanks  
-- Agricultural irrigation systems  
-- Industrial water storage  
-- Wells and reservoirs  
-
----
-
-## ⚠️ Problem Statement
-
-Manual monitoring of water levels is inefficient and can lead to:
-
-- Water overflow  
-- Pump damage due to dry running  
-- Waste of electricity and water  
-
-✅ This system solves these problems by providing automation and real-time response.
+- Измерване на разстоянието между сензора и водната повърхност с помощта на ултразвуков сензор
+- Преобразуване на измереното разстояние в данни за нивото на водата
+- Обработка на данните от сензора с помощта на микроконтролер
+- Дефиниране на прагови нива (минимални и максимални)
+- Автоматично управление на помпа с помощта на релеен модул
+- Показване на системни данни чрез сериен монитор за отстраняване на грешки и наблюдение
 
 ---
 
-## 🧩 Components
+## 🌍 Области на приложение
+
+- Битови резервоари за вода
+- Селскостопански напоителни системи
+- Промишлено съхранение на вода
+- Кладенци и резервоари
+
+---
+
+## ⚠️ Описание на проблема
+
+Ръчното наблюдение на нивата на водата е неефективно и може да доведе до:
+
+- Преливане на вода
+- Повреда на помпата поради работа на сухо
+- Разхищение на електроенергия и вода
+
+✅ Тази система решава тези проблеми, като осигурява автоматизация и реакция в реално време.
+
+---
+
+## 🧩 Компоненти
 
 ### 1. Arduino Uno
-- Microcontroller board based on ATmega328P  
-- Processes data from sensors and controls outputs  
+- Микроконтролерна платка, базирана на ESP32
+- Обработва данни от сензори и управлява изходите
 
-### 2. Ultrasonic Sensor (HC-SR04)
-- Measures distance using sound waves  
-- Sends a pulse and calculates time for echo return  
-- Used to determine water level  
+### 2. Ултразвуков сензор (HC-SR04)
+- Измерва разстоянието с помощта на звукови вълни
+- Изпраща импулс и изчислява времето за връщане на ехото
+- Използва се за определяне на нивото на водата
 
-### 3. Relay Module
-- Acts as a switch  
-- Allows Arduino to control high-voltage devices like a pump  
+### 3. Релеен модул
+- Действа като превключвател
+- Позволява на Arduino да управлява устройства с високо напрежение, като помпа
 
-### 4. Water Pump
-- Moves water into the tank  
-- Controlled automatically via relay  
+### 4. Водна помпа
+- Премества вода в резервоара
+- Управлява се автоматично чрез реле
 
-### 5. Jumper Wires
-- Used for electrical connections between components  
+### 5. Джъмперни кабели
+- Използват се за електрически връзки между компонентите
 
-### 6. Resistors
-- Protect components from excessive current  
+### 6. Резистори
+- Защитават компонентите от прекомерен ток
 
-### 7. Power Supply
-- Provides energy for Arduino and external devices  
+### 7. Захранване
+- Осигурява енергия за Arduino и външни устройства
 
 ---
 
-## 🔌 Connection Diagram
+## 🔌 Диаграма на свързване
 
-### Ultrasonic Sensor Connections
+### Връзки на ултразвуков сензор
 
-| Component Pin | Arduino Connection |
+| Пин на компонента | Връзка с Arduino |
 |--------------|------------------|
-| VCC          | 5V               |
-| GND          | GND              |
-| TRIG         | Digital Pin 9    |
-| ECHO         | Digital Pin 10   |
+| VCC | 5V |
+| GND | GND |
+| TRIG | Цифров пин 9 |
+| ECHO | Цифров пин 10 |
 
-### Relay Module Connections
+### Свързване на релейни модули
 
-| Component Pin | Arduino Connection |
+| Пин на компонента | Свързване с Arduino |
 |--------------|------------------|
-| IN           | Digital Pin 7     |
-| VCC          | 5V                |
-| GND          | GND               |
+| IN | Цифров пин 7 |
+| VCC | 5V |
+| GND | GND |
 
-### Pump Connection
+### Свързване на помпа
 
-- Connected through relay terminals:
-  - **COM (Common)**
-  - **NO (Normally Open)**  
+- Свързва се чрез релейни клеми:
+- **COM (Общ)**
+- **NO (Нормално отворен)**
 
-👉 When relay is activated → circuit closes → pump turns **ON**
-
----
-
-## ⚙️ Program Structure
-
-### 1. Pin Definitions
-Pins are assigned for sensor and relay control.
-
-### 2. Setup Function
-- Initializes pin modes  
-- Starts serial communication  
-
-### 3. Loop Function
-Runs continuously:
-- Sends ultrasonic signal  
-- Receives echo signal  
-- Calculates distance  
-- Compares with thresholds  
-- Controls pump accordingly  
+👉 Когато релето е активирано → веригата се затваря → помпата се включва **ВКЛ.**
 
 ---
 
-## 💻 Code
+## ⚙️ Структура на програмата
 
+### 1. Дефиниции на пиновете
+Пиновете са предназначени за управление на сензори и релета.
+
+### 2. Функция за настройка
+- Инициализира режимите на пинове
+- Стартира серийна комуникация
+
+### 3. Функция за контур
+Работи непрекъснато:
+- Изпраща ултразвуков сигнал
+- Приема ехо сигнал
+- Изчислява разстоянието
+- Сравнява с прагове
+- Управлява помпата съответно
+
+---
+
+## 💻 Код
 ```cpp
 #define TRIG_PIN 9
 #define ECHO_PIN 10
