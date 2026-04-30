@@ -1,110 +1,110 @@
 # Раздробете проектът си на малки стъпки и ги опишете в план.
-**Week 1: Planning and Preparation**
-**Goal:** Purchase components
+**Седмица 1: Планиране и подготовка**
+**Цел:** Закупуване на компоненти
 
-**Both:**
+**И двете:**
 
-* Understand how the system works
-* Divide the tasks
-* Make a list of required parts
+* Разбиране на начина на работа на системата
+* Разделяне на задачите
+* Направете списък с необходимите части
 
-**Person 1 (Hardware):**
+**Лице 1 (Хардуер):**
 
-* Chooses a sensor (ultrasonic or waterproof)
-* Researches how to connect it to ESP32
+* Избира сензор (ултразвуков или водоустойчив)
+* Проучва как да го свърже към ESP32
 
-**Person 2 (Software):**
+**Лице 2 (Софтуер):**
 
-* Researches:
+* Проучва:
 
-  * how ESP32 sends data (WiFi)
-  * platform
-
----
-
-**Week 2: Initial Testing**
-**Goal:** ESP32 + sensor are working
-
-**Person 1:**
-
-* Connects ESP32 to the sensor
-* Tests whether it measures distance
-
-**Person 2:**
-
-* Writes simple code to read data
-* Displays the result in Serial Monitor
+* как ESP32 изпраща данни (WiFi)
+* платформа
 
 ---
 
-**Week 3: Data Processing**
-**Goal:** Convert distance into water level
+**Седмица 2: Първоначално тестване**
+**Цел:** ESP32 + сензорът работят
 
-**Person 1:**
+**Лице 1:**
 
-* Measures a real container (tank/box)
-* Assists with testing
+* Свързва ESP32 към сензора
+* Тества дали измерва разстояние
 
-**Person 2:**
+**Лице 2:**
 
-* Converts distance into percentage (0–100%)
-* Adds logic:
-
-  * minimum level
-  * maximum level
+* Пише прост код за четене на данни
+* Показва резултата в Serial Monitor
 
 ---
 
-**Week 4: Pump Control**
-**Goal:** Automation
+**Седмица 3: Обработка на данни**
+**Цел:** Преобразуване на разстоянието във водно ниво
 
-**Person 1:**
+**Лице 1:**
 
-* Connects a relay module
-* Connects the pump safely
+* Измерва реален контейнер (резервоар/кутия)
+* Подпомага тестването
 
-**Person 2:**
+**Лице 2:**
 
-* Adds logic:
+* Преобразува разстоянието в проценти (0–100%)
+* Добавя логика:
 
-  * if level is low → turn on pump
-  * if level is high → turn off pump
-
----
-
-**Week 5: Web Visualization**
-**Goal:** Data visible online
-
-**Person 1:**
-
-* Tests hardware stability
-
-**Person 2:**
-
-* Creates:
-
-  * a graph (level over time)
-  * display of current level
+* минимално ниво
+* максимално ниво
 
 ---
 
-**Week 6: Finalization and Presentation**
-**Goal:** Completed project
+**Седмица 4: Управление на помпата**
+**Цел:** Автоматизация
 
-**Person 1:**
+**Лице 1:**
 
-* Places everything in a box
-* Organizes the wiring
+* Свързва релеен модул
+* Свързва помпата безопасно
 
-**Person 2:**
+**Лице 2:**
 
-* Prepares presentation:
+* Добавя логика:
 
-  * how the system works
-  * photos/video
-  * demonstration
+* ако нивото е ниско → включване на помпата
+* ако нивото е високо → изключване на помпата
 
-**Both:**
+---
 
-* Test the entire project
-* Rehearse the presentation
+**Седмица 5: Уеб визуализация**
+**Цел:** Данните са видими онлайн
+
+**Лице 1:**
+
+* Тества стабилността на хардуера
+
+**Лице 2:**
+
+* Създава:
+
+* графика (ниво във времето)
+* показване на текущото ниво
+
+---
+
+**Седмица 6: Финализиране и представяне**
+**Цел:** Завършено проект
+
+**Лице 1:**
+
+* Поставя всичко в кутия
+* Организира окабеляването
+
+**Лице 2:**
+
+* Подготвя презентация:
+
+* как работи системата
+* снимки/видео
+* демонстрация
+
+**И двамата:**
+
+* Тестват целия проект
+* Репетират презентацията
